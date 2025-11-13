@@ -1,0 +1,150 @@
+/* ===== Configuración General ===== */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 0;
+}
+
+/* ===== Contenedor Principal ===== */
+.settings-container {
+  background-color: white;
+  width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 32px;
+}
+
+/* ===== Header ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 4px; /* pequeño espacio entre el rayo y el texto */
+}
+
+/* Cambiar el color del rayo ⚡ */
+.icon {
+  color: #22c55e; /* verde brillante */
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* ===== Contenido Principal ===== */
+.settings-content h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.settings-content section {
+  margin-bottom: 28px;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+/* ===== Inputs de Contraseña ===== */
+.password-section input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.password-section input:focus {
+  outline: none;
+  border-color: #4ade80; /* verde suave */
+  box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.2);
+}
+
+/* ===== Notificaciones ===== */
+.notification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 0.95rem;
+}
+
+/* ===== Switch (botones verdes) ===== */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #22c55e;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* ===== Secciones Finales ===== */
+.privacy-section,
+.logout-section {
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+}
+
+.logout-section h3 {
+  color: #111;
+  cursor: pointer;
+}
